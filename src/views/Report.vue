@@ -128,21 +128,21 @@ export default {
     }
 
     const report=function(){
-      
+      let i = false;
       let path = Helper.API_ROUTE+"/report";
       if(form.value.id){
         path += "?id="+form.value.id
-       
+        i=true;
       }
       
-      // if(form.value.inTime){
-      //   path += ((i)? "&" : "?")+"inTime="+form.value.inTime
-      //   i =true
-      // }
-      // if(form.value.outTime){
-      //   path += ((i)? "&" : "?")+"outTime="+form.value.outTime
-      //   i =true
-      // }
+      if(form.value.inTime){
+        path += ((i)? "&" : "?")+"inTime="+form.value.inTime
+        i =true
+      }
+      if(form.value.outTime){
+        path += ((i)? "&" : "?")+"outTime="+form.value.outTime
+        i =true
+      }
 
       window.open(path)
     }
