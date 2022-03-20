@@ -1,4 +1,5 @@
-# practice-app
+# Employee Attenance Ui
+
 
 ## Project setup
 ```
